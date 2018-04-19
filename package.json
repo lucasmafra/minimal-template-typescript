@@ -1,0 +1,30 @@
+{
+  "name": "minimal-typescript-template",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest",
+    "test:acceptance": "cucumber-js --require 'spec/features/support/**/*.ts' --require-module ts-node/register spec"
+  },
+  "jest": {
+    "testRegex": "(spec/units.*|(\\.|/)(test|spec))\\.ts$",
+    "transform": {
+      ".(ts)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ]
+  },
+  "author": "Lucas Mafra",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cucumber": "^4.0.2",
+    "@types/expect": "^1.20.3",
+    "@types/jest": "^22.2.3",
+    "cucumber": "^4.2.1",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.4",
+    "ts-node": "^6.0.0",
+    "typescript": "^2.8.1"
+  }
+}
