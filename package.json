@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "test": "jest",
-    "test:acceptance": "cucumber-js --require 'spec/features/support/**/*.ts' --require-module ts-node/register spec"
+    "test:acceptance": "cucumber-js --require 'features/support/**/*.ts' --require-module ts-node/register features"
   },
   "jest": {
-    "testRegex": "(spec/units.*|(\\.|/)(test|spec))\\.ts$",
+    "testRegex": "(spec/.*|(\\.|/)(test|spec))\\.ts$",
     "transform": {
       ".(ts)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
